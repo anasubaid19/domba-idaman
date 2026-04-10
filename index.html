@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kandang Domba Idaman – Qurban Berkah 1447 H</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter','sans-serif'], display: ['Outfit','sans-serif'] },
+          colors: {
+            brand: { 50:'#f0fdf4',100:'#dcfce7',500:'#22c55e',600:'#16a34a',700:'#15803d',800:'#166534',900:'#14532d',950:'#052e16' },
+            gold:  { 400:'#fbbf24',500:'#f59e0b',600:'#d97706' }
+          },
+          boxShadow: { soft:'0 10px 40px -10px rgba(0,0,0,0.08)' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { color:#1f2937; background-color:#f8fafc; }
+    .glass-nav { background:rgba(255,255,255,0.95); backdrop-filter:blur(10px); border-bottom:1px solid rgba(0,0,0,0.05); }
+    .reveal { opacity:0; transform:translateY(30px); transition:all 0.8s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.active { opacity:1; transform:translateY(0); }
+    .hero-pattern { background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23166534' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    input:focus, select:focus, textarea:focus { outline:none; box-shadow:0 0 0 3px rgba(22,163,74,0.2); }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="#" class="flex items-center gap-2">
+          <span class="text-2xl">🐑</span>
+          <span class="font-display font-bold text-xl text-brand-900 tracking-tight">Kandang Domba <span class="text-gold-500">Idaman</span></span>
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#keunggulan" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">Keunggulan</a>
+          <a href="#harga" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">Daftar Harga</a>
+          <a href="#katalog" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">Katalog</a>
+          <a href="#pesan" class="bg-brand-700 hover:bg-brand-800 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">Pesan Sekarang</a>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-700 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+      <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
+        <a href="#keunggulan" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md">Keunggulan</a>
+        <a href="#harga" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md">Daftar Harga</a>
+        <a href="#katalog" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-md">Katalog</a>
+        <a href="#pesan" class="block px-3 py-3 text-base font-bold text-center text-white bg-brand-700 rounded-md mt-4">Pesan Sekarang</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-white hero-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-8">
+        <div class="w-full lg:w-1/2 text-center lg:text-left reveal">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-sm font-semibold mb-6">
+            <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+            Open Order Qurban 1447 H / 2026 M
+          </div>
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-950 leading-tight mb-6">
+            Sempurnakan Ibadah <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-brand-400">Qurban Anda</span>
+          </h1>
+          <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">Penyedia hewan qurban terpercaya dengan perawatan premium. Domba sehat, sesuai syariat, dan siap diantar gratis ke wilayah Jabodetabek.</p>
+          <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+            <a href="#pesan" class="w-full sm:w-auto px-8 py-3.5 bg-brand-700 hover:bg-brand-800 text-white rounded-full font-semibold transition-all shadow-lg flex items-center justify-center gap-2">
+              Pesan Sekarang
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="#harga" class="w-full sm:w-auto px-8 py-3.5 bg-white border-2 border-gray-200 hover:border-brand-600 text-gray-700 rounded-full font-semibold transition-all flex items-center justify-center gap-2">Lihat Harga</a>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 reveal">
+          <div class="relative">
+            <div class="absolute inset-0 bg-brand-100 rounded-full blur-3xl opacity-50 transform scale-110 -z-10"></div>
+            <img src="https://images.unsplash.com/photo-1484557985045-edf25e08da73?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Domba Qurban Premium" class="rounded-3xl shadow-2xl object-cover h-[400px] lg:h-[500px] w-full border-4 border-white">
+            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 border border-gray-100">
+              <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center">
+                <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <p class="text-xs text-gray-500 font-medium">Sesuai Syariat</p>
+                <p class="font-bold text-brand-900">100% Halal & Sah</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="bg-brand-900 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-brand-700/50">
+        <div class="text-center reveal"><div class="text-3xl font-display font-bold text-white mb-1">25-100<span class="text-yellow-400 text-xl">kg</span></div><div class="text-brand-100 text-sm font-medium">Ready Stok Tersedia</div></div>
+        <div class="text-center reveal"><div class="text-3xl font-display font-bold text-white mb-1">4-5<span class="text-yellow-400 text-xl">/5</span></div><div class="text-brand-100 text-sm font-medium">Body Condition Score</div></div>
+        <div class="text-center reveal"><div class="text-3xl font-display font-bold text-white mb-1">100<span class="text-yellow-400 text-xl">%</span></div><div class="text-brand-100 text-sm font-medium">Gratis Ongkir JABODETABEK</div></div>
+        <div class="text-center reveal"><div class="text-3xl font-display font-bold text-white mb-1">24<span class="text-yellow-400 text-xl">/7</span></div><div class="text-brand-100 text-sm font-medium">Pelayanan Pelanggan</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEUNGGULAN -->
+  <section id="keunggulan" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+        <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-2">Kenapa Memilih Kami</h2>
+        <p class="font-display text-3xl md:text-4xl font-bold text-gray-900">Keunggulan Pelayanan<br>Kandang Domba Idaman</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 shadow-soft border border-gray-100 hover:-translate-y-1 transition-transform duration-300 reveal">
+          <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 text-2xl">🌾</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Perawatan Premium</h3>
+          <p class="text-gray-600 leading-relaxed">Hewan dirawat dengan pakan berkualitas tinggi. Sudah termasuk dalam harga, tanpa biaya tambahan hingga hari H.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-soft border border-gray-100 hover:-translate-y-1 transition-transform duration-300 reveal">
+          <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 text-2xl">🚚</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Free Ongkir Jabodetabek</h3>
+          <p class="text-gray-600 leading-relaxed">Nikmati pengiriman gratis ke seluruh wilayah Jakarta, Bogor, Depok, Tangerang, dan Bekasi tanpa syarat tersembunyi.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-soft border border-gray-100 hover:-translate-y-1 transition-transform duration-300 reveal">
+          <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 text-2xl">🕌</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Sesuai Syariat</h3>
+          <p class="text-gray-600 leading-relaxed">Domba insyaAllah telah memenuhi syarat sah umur dan fisik untuk ibadah qurban sesuai ketentuan syariat Islam.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-soft border border-gray-100 hover:-translate-y-1 transition-transform duration-300 reveal">
+          <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 text-2xl">⚖️</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Timbangan Real & Transparan</h3>
+          <p class="text-gray-600 leading-relaxed">Berat hewan ditimbang secara jujur dan transparan langsung. Kami memastikan Anda mendapatkan bobot yang sesuai.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-soft border border-gray-100 hover:-translate-y-1 transition-transform duration-300 reveal">
+          <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 text-2xl">💪</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Kualitas Optimal BCS 4–5</h3>
+          <p class="text-gray-600 leading-relaxed">Kondisi tubuh domba berada di BCS 4–5 memastikan proporsi daging dan hasil karkas yang maksimal.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-soft border border-gray-100 hover:-translate-y-1 transition-transform duration-300 reveal">
+          <div class="w-14 h-14 bg-brand-50 rounded-xl flex items-center justify-center mb-6 text-2xl">🎁</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Bonus Spesial</h3>
+          <p class="text-gray-600 leading-relaxed">Dapatkan berbagai bonus spesial dan pelayanan ekstra untuk Anda yang melakukan pemesanan lebih awal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HARGA -->
+  <section id="harga" class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-2">Transparan & Terjangkau</h2>
+        <p class="font-display text-3xl md:text-4xl font-bold text-gray-900">Daftar Harga Hewan Qurban</p>
+        <p class="mt-4 text-gray-600">Bobot mulai dari 25 kg hingga 100 kg lebih.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden reveal">
+        <div class="bg-brand-900 px-6 py-8 md:px-10 text-center relative overflow-hidden">
+          <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-brand-800 rounded-full opacity-50"></div>
+          <div class="absolute bottom-0 left-0 -mb-4 -ml-4 w-16 h-16 bg-brand-800 rounded-full opacity-50"></div>
+          <h3 class="relative z-10 text-2xl font-display font-bold text-white mb-2">Domba Jantan Qurban</h3>
+          <div class="relative z-10 inline-block bg-yellow-500 text-brand-950 font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">Tahun 1447 H / 2026 M</div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="bg-gray-50 border-b border-gray-200">
+                <th class="py-4 px-6 font-semibold text-gray-600 text-sm uppercase">Tipe</th>
+                <th class="py-4 px-6 font-semibold text-gray-600 text-sm uppercase">Estimasi Bobot</th>
+                <th class="py-4 px-6 font-semibold text-gray-600 text-sm uppercase text-right">Harga (Rp)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="hover:bg-brand-50 transition-colors"><td class="py-4 px-6"><span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-gray-100 text-brand-700 font-bold">G</span></td><td class="py-4 px-6 text-gray-700 font-medium">25 – 27 kg</td><td class="py-4 px-6 text-right font-bold text-brand-700 text-lg">2.950.000</td></tr>
+              <tr class="hover:bg-brand-50 transition-colors"><td class="py-4 px-6"><span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-gray-100 text-brand-700 font-bold">F</span></td><td class="py-4 px-6 text-gray-700 font-medium">28 – 30 kg</td><td class="py-4 px-6 text-right font-bold text-brand-700 text-lg">3.250.000</td></tr>
+              <tr class="hover:bg-brand-50 transition-colors"><td class="py-4 px-6"><span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-gray-100 text-brand-700 font-bold">E</span></td><td class="py-4 px-6 text-gray-700 font-medium">31 – 35 kg</td><td class="py-4 px-6 text-right font-bold text-brand-700 text-lg">3.750.000</td></tr>
+              <tr class="hover:bg-brand-50 transition-colors"><td class="py-4 px-6"><span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-gray-100 text-brand-700 font-bold">D</span></td><td class="py-4 px-6 text-gray-700 font-medium">36 – 40 kg</td><td class="py-4 px-6 text-right font-bold text-brand-700 text-lg">4.250.000</td></tr>
+              <tr class="hover:bg-brand-50 transition-colors"><td class="py-4 px-6"><span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-gray-100 text-brand-700 font-bold">C</span></td><td class="py-4 px-6 text-gray-700 font-medium">41 – 45 kg</td><td class="py-4 px-6 text-right font-bold text-brand-700 text-lg">4.750.000</td></tr>
+              <tr class="hover:bg-brand-50 transition-colors"><td class="py-4 px-6"><span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-yellow-100 text-yellow-700 font-bold">B</span></td><td class="py-4 px-6 text-gray-700 font-medium">46 – 50 kg</td><td class="py-4 px-6 text-right font-bold text-brand-700 text-lg">5.250.000</td></tr>
+              <tr class="hover:bg-brand-50 transition-colors"><td class="py-4 px-6"><span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-yellow-100 text-yellow-700 font-bold">A</span></td><td class="py-4 px-6 text-gray-700 font-medium">51 – 55 kg</td><td class="py-4 px-6 text-right font-bold text-brand-700 text-lg">5.750.000</td></tr>
+              <tr class="hover:bg-brand-50 transition-colors bg-gray-50"><td class="py-4 px-6"><span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-700 text-white font-bold">S</span></td><td class="py-4 px-6 text-gray-700 font-medium">56 – 70 kg</td><td class="py-4 px-6 text-right"><span class="px-3 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-bold">JAPRI WA</span></td></tr>
+              <tr class="hover:bg-brand-50 transition-colors bg-gray-50"><td class="py-4 px-6"><span class="inline-flex items-center justify-center px-2 py-1 rounded-lg bg-brand-900 text-white font-bold text-sm">S+</span></td><td class="py-4 px-6 text-gray-700 font-medium">70 – 100 kg up</td><td class="py-4 px-6 text-right"><span class="px-3 py-1 bg-brand-100 text-brand-700 rounded-full text-sm font-bold">JAPRI WA</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="bg-gray-50 px-6 py-5 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-sm text-gray-500 italic">* Harga dapat berubah sewaktu-waktu</p>
+          <a href="#pesan" class="text-sm font-semibold text-brand-600 hover:text-brand-800 flex items-center gap-1">Tanya Harga Tipe S / S+ <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KATALOG VIDEO -->
+  <section id="katalog" class="py-24 bg-brand-950 text-white relative">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-800 rounded-full blur-3xl opacity-20"></div>
+      <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-800 rounded-full blur-3xl opacity-20"></div>
+    </div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-yellow-500 font-semibold tracking-wide uppercase text-sm mb-2">Lihat Langsung</h2>
+        <p class="font-display text-3xl md:text-4xl font-bold">Katalog Video Domba</p>
+        <p class="mt-4 text-brand-100 max-w-2xl mx-auto">Kami memastikan transparansi. Lihat kondisi fisik, pergerakan, dan kesehatan domba secara real melalui dokumentasi video tanpa editan.</p>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-2xl border border-brand-800 reveal" style="position:relative;padding-bottom:56.25%;height:0;">
+        <iframe
+          style="position:absolute;top:0;left:0;width:100%;height:100%;"
+          src="https://www.youtube.com/embed/videoseries?list=PLwEMrB-9JDVYB_mHjh41URdZQ5hz6pGpa&rel=0&modestbranding=1"
+          title="Katalog Domba Qurban – Kandang Domba Idaman"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- PESAN & KONTAK -->
+  <section id="pesan" class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+        <div class="lg:col-span-5 reveal">
+          <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-2">Konsultasi & Pemesanan</h2>
+          <p class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-6">Hubungi Kami Langsung</p>
+          <p class="text-gray-600 mb-8 leading-relaxed">Lebih nyaman berdiskusi secara personal? CS kami siap melayani dan membantu memilihkan domba terbaik sesuai kebutuhan Anda.</p>
+          <div class="space-y-4">
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4">
+              <div class="w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center flex-shrink-0 text-xl">📞</div>
+              <div>
+                <p class="text-sm font-bold text-brand-600 uppercase tracking-wide mb-1">CS 1 – Anas Ubaid</p>
+                <p class="text-xl font-bold text-gray-900 mb-3">0859-2102-6401</p>
+                <a href="https://wa.me/6285921026401?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20domba%20qurban%20dari%20Kandang%20Domba%20Idaman" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-[#25D366] hover:bg-[#128C7E] px-4 py-2 rounded-lg transition-colors">💬 Chat via WhatsApp</a>
+              </div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4">
+              <div class="w-12 h-12 bg-brand-50 rounded-full flex items-center justify-center flex-shrink-0 text-xl">📞</div>
+              <div>
+                <p class="text-sm font-bold text-brand-600 uppercase tracking-wide mb-1">CS 2 – Rafi Putra</p>
+                <p class="text-xl font-bold text-gray-900 mb-3">0813-4316-6442</p>
+                <a href="https://wa.me/6281343166442?text=Assalamualaikum%2C%20saya%20ingin%20memesan%20domba%20qurban%20dari%20Kandang%20Domba%20Idaman" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-[#25D366] hover:bg-[#128C7E] px-4 py-2 rounded-lg transition-colors">💬 Chat via WhatsApp</a>
+              </div>
+            </div>
+            <div class="mt-6 p-5 bg-brand-50 border border-brand-100 rounded-2xl text-center">
+              <p class="text-brand-800 font-semibold italic text-sm">✨ Qurban Mudah, Amanah, dan Penuh Berkah.</p>
+              <p class="text-brand-600 font-bold mt-1">Barakallahu Fiikum 🤝</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 reveal">
+          <div class="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-gray-100 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-brand-500 to-brand-700"></div>
+            <h3 class="font-display text-2xl font-bold text-brand-900 mb-6 flex items-center gap-2">📋 Formulir Pemesanan</h3>
+            <div class="space-y-4">
+
+              <!-- Nama Pembeli -->
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Nama Pembeli <span class="text-red-500">*</span></label>
+                <input type="text" id="nama_pembeli" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white transition-colors" placeholder="Nama lengkap pembeli"/>
+              </div>
+
+              <!-- No HP Pembeli + Jumlah Domba -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-semibold text-gray-700 mb-1">No. HP Pembeli <span class="text-red-500">*</span></label>
+                  <input type="tel" id="hp_pembeli" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white transition-colors" placeholder="08xxxxxxxxxx"/>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-gray-700 mb-1">Jumlah Domba <span class="text-red-500">*</span></label>
+                  <select id="jumlah" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white transition-colors appearance-none">
+                    <option value="">-- Pilih --</option>
+                    <option value="1 ekor">1 ekor</option>
+                    <option value="2 ekor">2 ekor</option>
+                    <option value="3 ekor">3 ekor</option>
+                    <option value="4 ekor">4 ekor</option>
+                    <option value="5 ekor">5 ekor</option>
+                    <option value="Lebih dari 5 ekor (hubungi CS)">Lebih dari 5 ekor</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Domba atas nama / kode -->
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                  Domba Atas Nama / Kode
+                  <span class="text-gray-400 font-normal text-xs ml-1">(contoh: Ahmad bin Hasan / QRB-001)</span>
+                </label>
+                <input type="text" id="atas_nama" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white transition-colors" placeholder="Nama / kode untuk domba qurban"/>
+              </div>
+
+              <!-- Alamat Pengiriman -->
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Alamat Pengiriman <span class="text-red-500">*</span></label>
+                <textarea id="alamat" rows="2" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white transition-colors resize-none" placeholder="Alamat lengkap pengiriman domba"></textarea>
+              </div>
+
+              <!-- Penerima + No HP Penerima -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-semibold text-gray-700 mb-1">Penerima di Lokasi <span class="text-red-500">*</span></label>
+                  <input type="text" id="penerima" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white transition-colors" placeholder="Nama penerima domba"/>
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-gray-700 mb-1">No. HP Penerima <span class="text-red-500">*</span></label>
+                  <input type="tel" id="hp_penerima" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white transition-colors" placeholder="08xxxxxxxxxx"/>
+                </div>
+              </div>
+
+              <!-- Link Google Maps -->
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">
+                  Link Google Maps
+                  <span class="text-gray-400 font-normal text-xs ml-1">(opsional, untuk mempermudah pengiriman)</span>
+                </label>
+                <input type="url" id="gmaps" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white transition-colors" placeholder="https://maps.app.goo.gl/..."/>
+              </div>
+
+              <!-- Info -->
+              <div class="flex items-start gap-2 p-3 bg-yellow-50 border border-yellow-100 rounded-xl text-xs text-yellow-700">
+                <span class="mt-0.5">💡</span>
+                <span>Setelah klik tombol di bawah, WhatsApp akan terbuka otomatis dengan data yang sudah terisi. Pastikan semua data sudah benar sebelum mengirim.</span>
+              </div>
+
+              <button onclick="submitOrder()" class="w-full bg-brand-700 hover:bg-brand-800 text-white font-bold py-4 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
+                💬 Kirim Formulir via WhatsApp
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-950 pt-16 pb-8 border-t border-brand-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-12 border-b border-brand-800 pb-8">
+        <div>
+          <p class="font-display font-bold text-2xl text-white mb-1">🐑 Kandang Domba <span class="text-yellow-500">Idaman</span></p>
+          <p class="text-brand-300 text-sm">Pusat domba qurban berkualitas premium.</p>
+        </div>
+        <div class="flex gap-4">
+          <a href="#" class="w-10 h-10 rounded-full bg-brand-900 flex items-center justify-center text-brand-400 hover:bg-brand-700 hover:text-white transition-colors text-lg">𝕏</a>
+          <a href="#" class="w-10 h-10 rounded-full bg-brand-900 flex items-center justify-center text-brand-400 hover:bg-brand-700 hover:text-white transition-colors text-lg">📸</a>
+        </div>
+      </div>
+      <div class="text-brand-400 text-sm flex flex-col md:flex-row justify-between items-center gap-2">
+        <p>&copy; 2026 Kandang Domba Idaman. All rights reserved.</p>
+        <p>Qurban Mudah, Amanah, dan Penuh Berkah. 🤝</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WA -->
+  <a href="https://wa.me/6285921026401?text=Assalamualaikum%2C%20saya%20ingin%20tanya%20domba%20qurban" class="fixed bottom-6 left-6 z-50 bg-[#25d366] hover:bg-[#128c7e] text-white px-5 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all flex items-center gap-2 group" target="_blank">
+    💬 <span class="hidden max-w-0 group-hover:max-w-xs group-hover:inline-block overflow-hidden whitespace-nowrap transition-all duration-300">Chat WA Kami</span>
+  </a>
+
+  <!-- SCROLL TOP -->
+  <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-6 right-6 z-50 bg-white border border-gray-200 text-gray-600 hover:text-brand-600 w-12 h-12 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-center transform hover:-translate-y-1">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </button>
+
+  <script>
+    // Mobile menu
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('menu-icon');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      icon.setAttribute('d', menu.classList.contains('hidden') ? 'M4 6h16M4 12h16M4 18h16' : 'M6 18L18 6M6 6l12 12');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach(l => l.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      icon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+    }));
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Scroll top button
+    const scrollBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+      scrollBtn.classList.toggle('opacity-0', window.scrollY <= 400);
+      scrollBtn.classList.toggle('pointer-events-none', window.scrollY <= 400);
+      scrollBtn.classList.toggle('opacity-100', window.scrollY > 400);
+      scrollBtn.classList.toggle('pointer-events-auto', window.scrollY > 400);
+    });
+
+    // Form submit to WA
+    function submitOrder() {
+      const nama_pembeli = document.getElementById('nama_pembeli').value.trim();
+      const hp_pembeli   = document.getElementById('hp_pembeli').value.trim();
+      const jumlah       = document.getElementById('jumlah').value;
+      const atas_nama    = document.getElementById('atas_nama').value.trim();
+      const alamat       = document.getElementById('alamat').value.trim();
+      const penerima     = document.getElementById('penerima').value.trim();
+      const hp_penerima  = document.getElementById('hp_penerima').value.trim();
+      const gmaps        = document.getElementById('gmaps').value.trim();
+
+      // Validasi field wajib
+      if (!nama_pembeli || !hp_pembeli || !jumlah || !alamat || !penerima || !hp_penerima) {
+        alert('⚠️ Mohon lengkapi semua field yang wajib diisi (bertanda *).');
+        return;
+      }
+
+      const msg =
+`Formulir Pemesanan Domba 🐑
+Kandang Domba Idaman.
+*(Via Website)*
+
+• Nama Pembeli: ${nama_pembeli}
+• No. HP Pembeli: ${hp_pembeli}
+• Jumlah Domba: ${jumlah}
+• Domba Atas Nama/Kode: ${atas_nama || '-'}
+• Alamat Pengiriman: ${alamat}
+• Penerima Domba di Lokasi: ${penerima}
+• No. HP Penerima: ${hp_penerima}
+• Link Google Maps: ${gmaps || '-'}`;
+
+      window.open(`https://wa.me/6285921026401?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+  </script>
+</body>
+</html>
